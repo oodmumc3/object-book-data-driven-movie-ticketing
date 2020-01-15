@@ -31,4 +31,33 @@ public class DiscountCondition {
 
     public LocalTime getEndTime() { return endTime; }
     public void setEndTime(LocalTime endTime) { this.endTime = endTime; }
+
+    /**
+     * 기간을 기준으로 할인이 가능한지 판단하여 반환한다.
+     * @param dayOfWeek 상영 요일
+     * @param time 상영 시간
+     * @return 할인 가능 여부
+     */
+    public boolean isDiscountable(DayOfWeek dayOfWeek, LocalTime time) {
+        if (this.type != DiscountConditionType.PERIOD) {
+            throw new IllegalArgumentException();
+        }
+
+        return this.dayOfWeek.equals(dayOfWeek)
+            && this.startTime.compareTo(time) <= 0
+            && this.endTime.compareTo(time) >= 0;
+    }
+
+    /**
+     * 상영 회차를 기준으로 할인이 가능한지 판단하여 반환한다.
+     * @param sequence 상영 회차I
+     * @return 할인 가능 여부
+     */
+    public boolean isDiscountable(int sequence) {
+        if (this.type != DiscountConditionType.SEQUENCE) {
+            throw new IllegalArgumentException();
+        }
+
+        return this.sequence == sequence;
+    }
 }
