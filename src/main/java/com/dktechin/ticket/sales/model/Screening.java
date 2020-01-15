@@ -13,10 +13,6 @@ public class Screening {
     /** * 상영 시작 시간 */
     private LocalDateTime whenScreened;
 
-    public Movie getMovie() { return movie; }
-    public int getSequence() { return sequence; }
-
-    public LocalDateTime getWhenScreened() { return whenScreened; }
     public void setMovie(Movie movie) { this.movie = movie; }
 
     public void setSequence(int sequence) { this.sequence = sequence; }

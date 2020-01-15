@@ -20,16 +20,12 @@ public class DiscountCondition {
     public DiscountConditionType getType() { return type; }
     public void setType(DiscountConditionType type) { this.type = type; }
 
-    public int getSequence() { return sequence; }
     public void setSequence(int sequence) { this.sequence = sequence; }
 
-    public DayOfWeek getDayOfWeek() { return dayOfWeek; }
     public void setDayOfWeek(DayOfWeek dayOfWeek) { this.dayOfWeek = dayOfWeek; }
 
-    public LocalTime getStartTime() { return startTime; }
     public void setStartTime(LocalTime startTime) { this.startTime = startTime; }
 
-    public LocalTime getEndTime() { return endTime; }
     public void setEndTime(LocalTime endTime) { this.endTime = endTime; }
 
     /**
