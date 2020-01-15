@@ -22,8 +22,9 @@ public class Movie {
     private List<DiscountCondition> discountConditions;
     /** * 영화 할인 정책 타입 */
     private MovieType movieType;
-
+    /** * 할인 가격 정보 */
     private Money discountAmount;
+    /** * 할인 비율 정보 */
     private double discountPercent;
 
     public String getTitle() { return title; }

@@ -13,28 +13,13 @@ public class Screening {
     /** * 상영 시작 시간 */
     private LocalDateTime whenScreened;
 
-    public Movie getMovie() {
-        return movie;
-    }
+    public Movie getMovie() { return movie; }
+    public int getSequence() { return sequence; }
 
-    public int getSequence() {
-        return sequence;
-    }
+    public LocalDateTime getWhenScreened() { return whenScreened; }
+    public void setMovie(Movie movie) { this.movie = movie; }
 
-    public LocalDateTime getWhenScreened() {
-        return whenScreened;
-    }
-
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
-
-    public void setSequence(int sequence) {
-        this.sequence = sequence;
-    }
-
-    public void setWhenScreened(LocalDateTime whenScreened) {
-        this.whenScreened = whenScreened;
-    }
+    public void setSequence(int sequence) { this.sequence = sequence; }
+    public void setWhenScreened(LocalDateTime whenScreened) { this.whenScreened = whenScreened; }
 }
 

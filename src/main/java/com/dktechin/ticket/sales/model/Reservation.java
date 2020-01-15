@@ -21,43 +21,15 @@ public class Reservation {
         this.audienceCount = audienceCount;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
+    public Customer getCustomer() { return customer; }
+    public void setCustomer(Customer customer) { this.customer = customer; }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
+    public Screening getScreening() { return screening; }
+    public void setScreening(Screening screening) { this.screening = screening; }
 
-    public Screening getScreening() {
-        return screening;
-    }
+    public Money getFee() { return fee; }
+    public void setFee(Money fee) { this.fee = fee; }
 
-    public void setScreening(Screening screening) {
-        this.screening = screening;
-    }
-
-    public Money getFee() {
-        return fee;
-    }
-
-    public void setFee(Money fee) {
-        this.fee = fee;
-    }
-
-    public int getAudienceCount() {
-        return audienceCount;
-    }
-
-    public void setAudienceCount(int audienceCount) {
-        this.audienceCount = audienceCount;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Reservation{");
-        sb.append("fee=").append(fee);
-        sb.append('}');
-        return sb.toString();
-    }
+    public int getAudienceCount() { return audienceCount; }
+    public void setAudienceCount(int audienceCount) { this.audienceCount = audienceCount; }
 }
